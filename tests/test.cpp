@@ -11,8 +11,12 @@ public:
 MockA* mockA = nullptr;
 
 A* A::getInstance() {
+    A* A::instance = nullptr;
     static A instance;  
-    return &instance;
+    if (!instance) {
+        instance = new A;
+    }
+    return instance;
 }
 
 A::A() {
