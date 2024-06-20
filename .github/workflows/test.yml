@@ -2,9 +2,9 @@ name: my-workflow-name
 
 on:
   push:
-    branches: [ main ]
+    branches: [ gadji ]
   pull_request:
-    branches: [ main ]
+    branches: [ gadji ]
 
 jobs:
   build:
