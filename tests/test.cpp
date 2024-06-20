@@ -11,13 +11,13 @@ public:
 MockA* mockA = nullptr;
 
 A* A::getInstance() {
-    A* A::instance = nullptr;
-    static A instance;  
+    static A* instance = nullptr;
     if (!instance) {
         instance = new A;
     }
     return instance;
 }
+
 
 A::A() {
       std::cout << "construct " << std::endl;
